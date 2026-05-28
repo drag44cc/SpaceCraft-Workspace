@@ -1,0 +1,8 @@
+{
+  "name": "SpaceCraft Workspace",
+  "description": "A Notion-Miro hybrid document and visual infinite canvas database productivity tool powered by Google Sheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
