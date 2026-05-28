@@ -99,18 +99,7 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
     }, 1000);
   };
 
-  const handleGuestBypass = () => {
-    const guestUser: User = {
-      id: `usr-guest-${Date.now()}`,
-      name: 'Guest Pilot',
-      email: 'guest@spacecraft.internal',
-      role: 'Sandbox Observer',
-      avatarColor: 'indigo',
-      createdAt: new Date().toISOString()
-    };
-    localStorage.setItem('spacecraft_active_user', JSON.stringify(guestUser));
-    onLogin(guestUser);
-  };
+
 
   return (
     <div id="login-container" className="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden font-sans antialiased text-slate-200">
@@ -215,17 +204,7 @@ export default function LoginScreen({ onLogin }: LoginScreenProps) {
             </button>
           </form>
 
-          {/* Sandbox Bypass Option */}
-          <div className="mt-5 text-center">
-            <button
-              type="button"
-              id="bypass-demo-btn"
-              onClick={handleGuestBypass}
-              className="text-xs text-slate-400 hover:text-white transition py-1 hover:underline underline-offset-4"
-            >
-              Skip & launch in Offline Guest Mode
-            </button>
-          </div>
+
 
         </div>
 
